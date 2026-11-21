@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f5f2ec" />
+  <title>Jocelyn Lin — Embedded Firmware Engineer</title>
+  <meta name="description" content="Jocelyn (Hsiao-Tung) Lin is an embedded firmware engineer in Taipei with 4+ years in ARM SoC bring-up, PMU/SCU drivers, RTOS, Linux drivers and pre-to-post-silicon validation." />
+  <meta property="og:title" content="Jocelyn Lin — Embedded Firmware Engineer" />
+  <meta property="og:description" content="From the first register write to production silicon." />
+  <meta property="og:image" content="https://lumiday2026.github.io/jocelyn-lin/images/bench.jpg" />
+  <meta property="og:url" content="https://lumiday2026.github.io/jocelyn-lin/" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png?v=3" />
+  <link rel="icon" type="image/png" sizes="64x64" href="favicon-64.png?v=3" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Source+Sans+3:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=39" />
+  <script src="main.js?v=38" defer></script>
+</head>
+<body>
+  <a href="#main" class="skip">Skip to content</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner wrap">
+      <a href="#top" class="wordmark">Jocelyn Lin<span>.</span></a>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="nav__cta">Get in touch</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap" id="top">
+      <div class="hero__text">
+        <p class="label rise" style="--d:0"><span class="pulse"></span>Embedded Firmware Engineer · Taipei, Taiwan</p>
+        <h1 class="hero__title rise" style="--d:1">Bringing silicon to <em>life</em>, from the first register write to production.</h1>
+        <p class="hero__lede rise" style="--d:2">I'm Jocelyn, a firmware engineer with 4+ years of bringing up ARM SoCs, from FPGA prototypes to production silicon.</p>
+        <div class="hero__actions rise" style="--d:3">
+          <a href="#work" class="btn btn--solid">Explore my work <span aria-hidden="true">→</span></a>
+          <a href="#contact" class="btn btn--text">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <figure class="hero__media rise" style="--d:2">
+        <div class="hero__frame">
+          <img src="images/bench.jpg" alt="Jocelyn probing an evaluation board at her lab bench" width="1800" height="1200" fetchpriority="high" />
+        </div>
+        <figcaption class="hero__card">
+          <span class="label label--muted">Currently</span>
+          <strong>Open to firmware, embedded &amp; Linux kernel roles</strong>
+          <span class="hero__card-meta">Taipei · Open to relocation</span>
+        </figcaption>
+        <span class="hero__tag mono">FIG. 01 — AT THE BENCH</span>
+      </figure>
+    </section>
+
+    <!-- ============ PROOF STRIP ============ -->
+    <section class="proof wrap" aria-label="Highlights">
+      <div class="proof__item reveal">
+        <span class="proof__num"><span data-count="4">0</span>+</span>
+        <span class="proof__label">years in ARM SoC bring-up &amp; firmware</span>
+      </div>
+      <div class="proof__item reveal">
+        <span class="proof__num"><span data-count="97">0</span>%</span>
+        <span class="proof__label">DeepSleep power cut, 63.4 mW → 1.5 mW</span>
+      </div>
+      <div class="proof__item reveal">
+        <span class="proof__num"><span data-count="70">0</span>%</span>
+        <span class="proof__label">standby current cut, 2.6 A → 0.8 A</span>
+      </div>
+      <div class="proof__item reveal">
+        <span class="proof__num"><span data-count="7">0</span>-dan</span>
+        <span class="proof__label">Go player, World Mind Sports Games gold medalist</span>
+      </div>
+    </section>
+
+    <div class="trail wrap reveal">
+      <span class="label label--muted">Experience at</span>
+      <span>SiliconAuto</span><i></i><span>Quanta Computer</span><i></i><span>National Tsing Hua University</span>
+    </div>
+
+    <!-- ============ EXPERTISE ============ -->
+    <section class="expertise wrap" id="expertise">
+      <p class="label reveal">What I do</p>
+      <div class="expertise__grid">
+      <figure class="expertise__photo reveal"><img src="images/lab-team.jpg" alt="Jocelyn debugging a board with teammates at the oscilloscope" loading="lazy" /></figure>
+      <ul class="skills-strip">
+        <li class="reveal"><span class="mono">01</span><h3>SoC bring-up &amp; drivers</h3><p class="mono">Bare-metal C · PMU · SCU · I2C · CAN</p></li>
+        <li class="reveal"><span class="mono">02</span><h3>Power, clock &amp; reset</h3><p class="mono">Boot flow · Low-power · Wake-up</p></li>
+        <li class="reveal"><span class="mono">03</span><h3>Silicon validation</h3><p class="mono">FPGA · EVB · Silicon · HTOL</p></li>
+        <li class="reveal"><span class="mono">04</span><h3>RTOS &amp; Linux</h3><p class="mono">FreeRTOS · Zephyr · Linux</p></li>
+      </ul>
+      </div>
+    </section>
+
+    <!-- ============ SELECTED WORK ============ -->
+    <section class="section wrap" id="work">
+      <header class="sec-head sec-head--split reveal">
+        <div>
+          <p class="label">Selected work</p>
+          <h2>Small details.<br /><em>Measurable impact.</em></h2>
+        </div>
+      </header>
+
+      <!-- Case 01: PMU -->
+      <article class="case reveal">
+        <div class="case__body">
+          <p class="case__meta mono"><span>01</span> SiliconAuto · Automotive SoC · PMU driver</p>
+          <h3 class="case__title">Teaching a chip<br />when to <em>sleep.</em></h3>
+          <p class="case__intro">A register-level PMU driver for an automotive ARM SoC, from architecture to production.</p>
+          <button type="button" class="link" data-note="pmu">Details <span aria-hidden="true">+</span></button>
+        </div>
+
+        <div class="fsm" id="fsm">
+          <div class="fsm__top mono"><span>Power-mode state machine</span><span>concept</span></div>
+          <svg viewBox="0 0 440 330" class="fsm__svg" role="img" aria-label="Diagram of SoC power states: Power off, Reset, Normal, Low speed, Sleep and DeepSleep">
+            <defs>
+              <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" class="fsm__arrowhead" /></marker>
+            </defs>
+            <g class="fsm__edges">
+              <path d="M220 52V88" marker-end="url(#arr)" />
+              <path d="M200 128L132 170" marker-end="url(#arr)" />
+              <path d="M150 192H286" marker-end="url(#arr)" marker-start="url(#arr)" />
+              <path d="M95 212V256" marker-end="url(#arr)" marker-start="url(#arr)" />
+              <path d="M325 212V256" marker-end="url(#arr)" marker-start="url(#arr)" />
+              <path d="M150 182C210 150 300 120 372 116" class="fsm__ds" marker-end="url(#arr)" />
+              <path d="M360 100C320 80 290 90 262 104" class="fsm__wake" marker-end="url(#arr)" />
+            </g>
+            <g class="fsm__labels mono">
+              <text x="212" y="76" text-anchor="end">power ramped</text>
+              <text x="200" y="184">SCU</text>
+              <text x="103" y="240">WFE / IRQ</text>
+              <text x="333" y="240">WFE / IRQ</text>
+              <text x="280" y="140" class="fsm__ds-t">ds_en</text>
+              <text x="292" y="80" class="fsm__wake-t">wake factor</text>
+            </g>
+            <g class="fsm__nodes">
+              <g class="node" data-state="off"><rect x="170" y="16" width="100" height="36" rx="18" /><text x="220" y="39">Power off</text></g>
+              <g class="node" data-state="reset"><rect x="180" y="90" width="80" height="36" rx="18" /><text x="220" y="113">Reset</text></g>
+              <g class="node" data-state="normal"><rect x="40" y="174" width="110" height="36" rx="18" /><text x="95" y="197">Normal</text></g>
+              <g class="node" data-state="low"><rect x="288" y="174" width="110" height="36" rx="18" /><text x="343" y="197">Low speed</text></g>
+              <g class="node" data-state="sleep"><rect x="40" y="258" width="110" height="36" rx="18" /><text x="95" y="281">Sleep</text></g>
+              <g class="node" data-state="lsleep"><rect x="270" y="258" width="110" height="36" rx="18" /><text x="325" y="281">LS sleep</text></g>
+              <g class="node node--ds" data-state="deep"><rect x="330" y="86" width="104" height="36" rx="18" /><text x="382" y="109">DeepSleep</text></g>
+            </g>
+          </svg>
+          <div class="fsm__panel">
+            <div class="fsm__state">
+              <span class="label label--muted">State</span>
+              <strong id="fsmName">Normal</strong>
+              <p id="fsmDesc">Full-speed operation. Clocks and power domains are on.</p>
+            </div>
+            <div class="fsm__power">
+              <span class="label label--muted">DeepSleep power</span>
+              <div class="watt"><span class="watt__before">63.4<small>mW</small></span><span class="watt__arrow">→</span><span class="watt__after">1.5<small>mW</small></span></div>
+              <div class="meter"><i class="meter__a"></i><i class="meter__b"></i></div>
+              <span class="fsm__hint">−97% through power-sequencing optimization</span>
+            </div>
+          </div>
+          <p class="fsm__help mono">Tap a state to explore ↑</p>
+        </div>
+      </article>
+
+      <ol class="plist">
+        <li class="prow reveal">
+          <span class="prow__n mono">02</span>
+          <div class="prow__main">
+            <p class="prow__meta mono">SiliconAuto · SCU driver</p>
+            <h3>Clocks, resets &amp; a <em>secure</em> boundary.</h3>
+          </div>
+          <ul class="prow__keys mono"><li>Clock tree &amp; gating</li><li>Reset sequencing</li><li>TrustZone security</li></ul>
+          <button type="button" class="prow__more" data-note="scu" aria-label="Details: SCU driver"><span>+</span></button>
+        </li>
+        <li class="prow reveal">
+          <span class="prow__n mono">03</span>
+          <div class="prow__main">
+            <p class="prow__meta mono">SiliconAuto · System validation</p>
+            <h3>Confidence across <em>every</em> stage.</h3>
+          </div>
+          <div class="prow__keys">
+            <ol class="stages"><li><span>01</span>FPGA</li><li><span>02</span>EVB</li><li><span>03</span>Silicon</li></ol>
+            <p class="prow__sub mono">Functional · Stress · SIV · HTOL</p>
+          </div>
+          <button type="button" class="prow__more" data-note="validation" aria-label="Details: system validation"><span>+</span></button>
+        </li>
+        <li class="prow reveal">
+          <span class="prow__n mono">04</span>
+          <div class="prow__main">
+            <p class="prow__meta mono">Customer platform · Germany</p>
+            <h3>From a chip to a <em>customer's</em> platform.</h3>
+          </div>
+          <div class="prow__keys">
+            <p class="prow__big">EW<span>2026</span></p>
+            <p class="prow__sub mono">Zephyr shim drivers · SDK · HW / SW debug</p>
+          </div>
+          <button type="button" class="prow__more" data-note="customer" aria-label="Details: customer platform"><span>+</span></button>
+        </li>
+        <li class="prow reveal">
+          <span class="prow__n mono">05</span>
+          <div class="prow__main">
+            <p class="prow__meta mono">Quanta Computer · NVIDIA Orin</p>
+            <h3>Finding the amps hiding in <em>standby.</em></h3>
+          </div>
+          <div class="prow__keys">
+            <p class="prow__big">−70<span>%</span></p>
+            <p class="prow__sub mono">Standby current 2.6 A → 0.8 A</p>
+          </div>
+          <button type="button" class="prow__more" data-note="quanta" aria-label="Details: Quanta SC7"><span>+</span></button>
+        </li>
+        <li class="prow reveal">
+          <span class="prow__n mono">06</span>
+          <div class="prow__main">
+            <p class="prow__meta mono">Self-directed · Raspberry Pi 5</p>
+            <h3>Taking it up to <em>the kernel.</em></h3>
+          </div>
+          <ul class="prow__keys mono"><li>Kernel modules</li><li>Platform drivers · DT overlays</li><li>IRQ handlers</li></ul>
+          <button type="button" class="prow__more" data-note="linux" aria-label="Details: Linux drivers"><span>+</span></button>
+        </li>
+      </ol>
+
+      <!-- 07 GoTime -->
+      <article class="gotime reveal">
+        <div class="gotime__text">
+          <p class="case__meta mono"><span>07</span> Independent product</p>
+          <div class="gotime__brand">
+            <img src="images/gotime-icon.png" alt="" width="56" height="56" loading="lazy" />
+            <div><strong>棋時 GoTime</strong><span>Designed &amp; built solo · iOS · Android · Web</span></div>
+          </div>
+          <h3>A lifelong game. <em>A product of my own.</em></h3>
+          <p class="mono gotime__feat">Tournaments · Pro games · AI review · Go clock</p>
+          <div class="stat"><span class="stat__num">450+</span><span class="stat__txt mono">App downloads<br />as of Nov 2026</span></div>
+          <div class="gotime__links">
+            <a class="btn btn--solid btn--sm" href="https://gotime-tw.com" target="_blank" rel="noopener noreferrer">Visit website <span aria-hidden="true">↗</span></a>
+            <a class="store" href="https://apps.apple.com/tw/app/id6790337654" target="_blank" rel="noopener noreferrer">App Store</a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.gotimetw.app" target="_blank" rel="noopener noreferrer">Google Play</a>
+          </div>
+        </div>
+        <div class="phones">
+          <figure class="phone"><img src="images/gotime-calendar-400.webp" alt="GoTime tournament calendar screen" loading="lazy" width="400" height="800" /><figcaption class="mono">Tournaments</figcaption></figure>
+          <figure class="phone phone--mid"><img src="images/gotime-ai-review-400.webp" alt="GoTime game record viewer with AI position analysis" loading="lazy" width="400" height="800" /><figcaption class="mono">AI review</figcaption></figure>
+          <figure class="phone"><img src="images/gotime-timer-400.webp" alt="GoTime Go clock screen" loading="lazy" width="400" height="800" /><figcaption class="mono">Go clock</figcaption></figure>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section wrap" id="about">
+      <header class="sec-head sec-head--split reveal">
+        <div>
+          <p class="label">About</p>
+          <h2>An engineer's mind.<br />A Go player's <em>patience.</em></h2>
+        </div>
+        <p class="sec-head__aside">Registers on a chip or stones on a board, I like seeing how the pieces fit.</p>
+      </header>
+
+      <div class="stories">
+        <article class="story reveal">
+          <button class="story__img" data-full="images/go-portrait.jpg" data-cap="At the Go board, where it all started"><img src="images/go-portrait.jpg" alt="Jocelyn smiling while playing Go" loading="lazy" /><span class="mono">View photo</span></button>
+          <p class="story__label mono">Go / 圍棋</p>
+          <h3>Thinking beyond the next move.</h3>
+          <p>7-dan player and WMSG gold medalist. Go taught me to see the whole board.</p>
+        </article>
+        <article class="story story--b reveal">
+          <button class="story__img" data-full="images/hokkaido.jpg" data-cap="A wider view: summer flower fields"><img src="images/hokkaido.jpg" alt="Jocelyn in a summer flower field" loading="lazy" /><span class="mono">View photo</span></button>
+          <p class="story__label mono">A change of scenery</p>
+          <h3>A wider view.</h3>
+          <p>Scenic places, small towns and time to look around.</p>
+        </article>
+        <article class="story story--c reveal">
+          <button class="story__img" data-full="images/graduation.jpg" data-cap="Commencement, National Tsing Hua University"><img src="images/graduation.jpg" alt="Jocelyn at her graduation from National Tsing Hua University" loading="lazy" /><span class="mono">View photo</span></button>
+          <p class="story__label mono">A starting point</p>
+          <h3>More than one way to think.</h3>
+          <p>Quantitative Finance and CS at NTHU taught me to see a problem from more than one angle.</p>
+        </article>
+      </div>
+
+      <div class="about__bottom reveal">
+        <p class="about__body">Still curious.<br /><em>In every part of life.</em></p>
+        <dl class="facts facts--row">
+          <div><dt class="label label--muted">Based in</dt><dd>Taipei, Taiwan</dd></div>
+          <div><dt class="label label--muted">Education</dt><dd>NTHU<br /><span>Quant. Finance &amp; CS</span></dd></div>
+          <div><dt class="label label--muted">Languages</dt><dd>C · C++ · Python</dd></div>
+          <div><dt class="label label--muted">Beyond work</dt><dd>7-dan Go player<br /><span>Creator of GoTime</span></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section wrap" id="experience">
+      <header class="sec-head reveal">
+        <p class="label">Experience</p>
+        <h2>Built on <em>hands-on</em> work.</h2>
+      </header>
+
+      <div class="xp">
+        <article class="xp__row reveal">
+          <div class="xp__when mono">Aug 2023 — Apr 2026</div>
+          <div class="xp__what">
+            <h3>Firmware Engineer</h3>
+            <p class="xp__co">SiliconAuto TW Co. · Taipei</p>
+          </div>
+          <ul class="xp__list">
+            <li>PMU / SCU drivers from architecture to production, with DeepSleep power down 97%.</li>
+            <li>FreeRTOS validation framework across FPGA, EVB and silicon.</li>
+            <li>On-site customer bring-up in Germany, plus Zephyr drivers and SDK releases.</li>
+          </ul>
+        </article>
+        <article class="xp__row reveal">
+          <div class="xp__when mono">May 2022 — Jul 2023</div>
+          <div class="xp__what">
+            <h3>Software Engineer</h3>
+            <p class="xp__co">Quanta Computer Inc.</p>
+          </div>
+          <ul class="xp__list">
+            <li>Board bring-up across I2C, LIN, CAN and Ethernet, plus automated test systems.</li>
+            <li>NVIDIA Orin SC7 DeepSleep, with standby current down 70%.</li>
+          </ul>
+        </article>
+        <article class="xp__row reveal">
+          <div class="xp__when mono">Graduated Jan 2022</div>
+          <div class="xp__what">
+            <h3>B.S., Management &amp; Technology</h3>
+            <p class="xp__co">National Tsing Hua University</p>
+          </div>
+          <ul class="xp__list">
+            <li>Quantitative Finance &amp; Computer Science</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="toolkit">
+        <div class="toolkit__col reveal">
+          <h4 class="label">Platforms</h4>
+          <p>ARM Cortex-M / A · ARM64 · FreeRTOS · Zephyr · Linux</p>
+        </div>
+        <div class="toolkit__col reveal">
+          <h4 class="label">Kernel &amp; drivers</h4>
+          <p>Kernel modules · platform drivers · device tree · IRQ</p>
+        </div>
+        <div class="toolkit__col reveal">
+          <h4 class="label">Interfaces</h4>
+          <p>PMU · SCU · I2C · SPI · GPIO · CAN · LIN</p>
+        </div>
+        <div class="toolkit__col reveal">
+          <h4 class="label">At the bench</h4>
+          <p>JTAG · GDB · ftrace · logic analyzer · oscilloscope</p>
+        </div>
+        <div class="toolkit__col reveal">
+          <h4 class="label">Quality &amp; safety</h4>
+          <p>ASPICE · ISO 26262 · ISO 21434 · MISRA-C</p>
+        </div>
+        <div class="toolkit__col reveal">
+          <h4 class="label">Languages</h4>
+          <p>C (advanced) · C++ · Python</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HONORS ============ -->
+    <section class="section wrap" id="honors">
+      <header class="sec-head sec-head--split reveal">
+        <div>
+          <p class="label">Honors &amp; certifications</p>
+          <h2>Patience, practiced<br /><em>at the highest level.</em></h2>
+        </div>
+        <p class="sec-head__aside">Go, academics and automotive security.</p>
+      </header>
+      <ol class="honors">
+        <li class="honor honor--feature reveal">
+          <span class="honor__year mono">2012</span>
+          <div class="honor__main">
+            <h3>Gold Medal, Women's Individual Go</h3>
+            <p>2nd World Mind Sports Games · Chinese Taipei</p>
+          </div>
+          <span class="honor__tag mono">Go · Gold</span>
+        </li>
+        <li class="honor reveal">
+          <span class="honor__year mono">2017</span>
+          <div class="honor__main">
+            <h3>First Place, Women</h3>
+            <p>15th World Students Go Oza Championship</p>
+          </div>
+          <span class="honor__tag mono">Go · 1st</span>
+        </li>
+        <li class="honor reveal">
+          <span class="honor__year mono">2017</span>
+          <div class="honor__main">
+            <h3>3rd Place, Individual Tournament</h3>
+            <p>1st Asian Female Baduk Tournament</p>
+          </div>
+          <span class="honor__tag mono">Go · 3rd</span>
+        </li>
+        <li class="honor reveal">
+          <span class="honor__year mono">2021</span>
+          <div class="honor__main">
+            <h3>Presidential Hsing Chien Award</h3>
+            <p>National Tsing Hua University · extracurricular excellence</p>
+          </div>
+          <span class="honor__tag mono">Academic</span>
+        </li>
+        <li class="honor reveal">
+          <span class="honor__year mono">2023</span>
+          <div class="honor__main">
+            <h3>ISO/SAE 21434:2021 Certificate of Achievement</h3>
+            <p>TÜV NORD Taiwan · automotive cybersecurity</p>
+          </div>
+          <span class="honor__tag mono">Certification</span>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="wrap contact__inner">
+        <p class="label label--light">Contact</p>
+        <figure class="contact__photo reveal"><img src="images/headshot.jpg" alt="Portrait of Jocelyn Lin" loading="lazy" /></figure>
+        <h2 class="reveal">Have a platform<br />that needs to <em>wake up?</em></h2>
+        <p class="contact__lede reveal">Open to firmware, embedded and Linux kernel roles. <span class="pill">Open to relocation</span></p>
+        <div class="contact__links reveal">
+          <a href="mailto:redclould97@gmail.com" class="contact__big"><span class="contact__k mono">Email</span><span class="contact__v">redclould97@gmail.com</span><span class="contact__arrow" aria-hidden="true">↗</span></a>
+          <div class="contact__row">
+            <a href="https://www.linkedin.com/in/hsiao-tung-lin" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a>
+            <a href="https://gotime-tw.com" target="_blank" rel="noopener">GoTime <span aria-hidden="true">↗</span></a>
+            <span class="mono">Taipei, Taiwan · UTC+8</span>
+          </div>
+        </div>
+      </div>
+      <footer class="footer wrap">
+        <span>© <span id="year">2026</span> Jocelyn (Hsiao-Tung) Lin</span>
+        <span>Thoughtful moves. Reliable systems.</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <!-- Project details -->
+  <dialog class="notes" id="notes" aria-labelledby="notesTitle">
+    <button class="notes__x" data-close aria-label="Close">×</button>
+    <div class="notes__media" id="notesMedia" hidden></div>
+    <p class="case__meta mono" id="notesMeta"></p>
+    <h3 id="notesTitle"></h3>
+    <ul class="ticks" id="notesList"></ul>
+    <p class="notes__foot mono">High-level summary · no proprietary details</p>
+  </dialog>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button class="lightbox__x" data-close aria-label="Close">×</button>
+    <img id="lbImg" alt="" />
+    <p id="lbCap" class="mono"></p>
+  </dialog>
+</body>
+</html>
