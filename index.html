@@ -111,11 +111,16 @@
       </header>
 
       <!-- Case 01: PMU -->
-      <article class="case reveal">
+      <article class="case case--fsm reveal">
         <div class="case__body">
           <p class="case__meta mono"><span>01</span> SiliconAuto · Automotive SoC · PMU driver</p>
-          <h3 class="case__title">Teaching a chip<br />when to <em>sleep.</em></h3>
-          <p class="case__intro">A register-level PMU driver for an automotive ARM SoC, from architecture to production.</p>
+          <div class="case__head">
+            <div class="case__text">
+              <h3 class="case__title">Teaching a chip<br />when to <em>sleep.</em></h3>
+              <p class="case__intro">A register-level PMU driver for an automotive ARM SoC, from architecture to production.</p>
+            </div>
+            <img class="case__board" src="images/xmotiv-board.png" alt="XMotiv automotive SoC module board" width="435" height="351" loading="lazy" />
+          </div>
           <button type="button" class="link" data-note="pmu">Details <span aria-hidden="true">+</span></button>
         </div>
 
@@ -152,20 +157,20 @@
               <g class="node node--ds" data-state="deep"><rect x="330" y="86" width="104" height="36" rx="18" /><text x="382" y="109">DeepSleep</text></g>
             </g>
           </svg>
-          <div class="fsm__panel">
-            <div class="fsm__state">
-              <span class="label label--muted">State</span>
-              <strong id="fsmName">Normal</strong>
-              <p id="fsmDesc">Full-speed operation. Clocks and power domains are on.</p>
-            </div>
-            <div class="fsm__power">
-              <span class="label label--muted">DeepSleep power</span>
-              <div class="watt"><span class="watt__before">63.4<small>mW</small></span><span class="watt__arrow">→</span><span class="watt__after">1.5<small>mW</small></span></div>
-              <div class="meter"><i class="meter__a"></i><i class="meter__b"></i></div>
-              <span class="fsm__hint">−97% through power-sequencing optimization</span>
-            </div>
-          </div>
           <p class="fsm__help mono">Tap a state to explore ↑</p>
+        </div>
+        <div class="fsm__panel">
+          <div class="fsm__state">
+            <span class="label label--muted">State</span>
+            <strong id="fsmName">Normal</strong>
+            <p id="fsmDesc">Full-speed operation. Clocks and power domains are on.</p>
+          </div>
+          <div class="fsm__power">
+            <span class="label label--muted">DeepSleep power</span>
+            <div class="watt"><span class="watt__before">63.4<small>mW</small></span><span class="watt__arrow">→</span><span class="watt__after">1.5<small>mW</small></span></div>
+            <div class="meter"><i class="meter__a"></i><i class="meter__b"></i></div>
+            <span class="fsm__hint">−97% through power-sequencing optimization</span>
+          </div>
         </div>
       </article>
 

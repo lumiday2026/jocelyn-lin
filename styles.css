@@ -144,6 +144,15 @@ h2, h3 { text-wrap: balance; }
   margin-bottom: 24px;
 }
 .case__body { display: grid; gap: 20px; align-content: start; }
+/* 01: readout sits under the text on desktop so the diagram card stays short */
+.case--fsm { grid-template-columns: 1fr 1.05fr; grid-template-areas: "body fsm" "panel fsm"; align-items: start; row-gap: 28px; }
+.case--fsm > .case__body { grid-area: body; align-self: end; }
+.case--fsm > .fsm { grid-area: fsm; align-self: center; }
+.case--fsm > .fsm__panel { grid-area: panel; }
+.case__head { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.case__text { display: grid; gap: 20px; min-width: 0; }
+.case__board { width: clamp(120px, 13vw, 180px); height: auto; flex-shrink: 0; filter: drop-shadow(0 10px 14px rgba(20, 30, 45, .18)); }
+@media (max-width: 760px) { .case__board { width: 104px; } }
 .case__meta { font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); display: flex; gap: 12px; align-items: center; }
 .case__meta span { color: var(--accent); padding-right: 12px; border-right: 1px solid var(--line-2); }
 .case__title { font-size: clamp(31px, 3.1vw, 44px); letter-spacing: -.01em; }
@@ -350,6 +359,7 @@ h2, h3 { text-wrap: balance; }
   .hero__card { left: 16px; bottom: 16px; }
   .hero__tag { display: none; }
   .case, .case--photo { grid-template-columns: 1fr; }
+  .case--fsm { grid-template-areas: "body" "fsm" "panel"; }
   .pillars { grid-template-columns: 1fr 1fr; }
   .pillar:nth-child(3) { padding-left: 0; border-left: 0; }
   .pillar:nth-child(n+3) { border-top: 1px solid var(--line); }
@@ -494,6 +504,31 @@ h2, h3 { text-wrap: balance; }
 .phone img { height: auto; border: 0; border-radius: 12px; box-shadow: 0 24px 40px -26px rgba(20, 26, 34, .5); }
 .phone--mid { transform: translateY(-14px); }
 @media (max-width: 760px) { .phone img { border-radius: 8px; } }
+
+/* GoTime phones: staggered entrance, gentle float, lift on hover */
+.gotime .phone img { opacity: 0; transition: translate .5s var(--ease), scale .5s var(--ease), box-shadow .5s var(--ease), filter .5s; }
+.gotime .phone figcaption { opacity: 0; transition: opacity .8s var(--ease), color .3s; }
+.gotime.in .phone img {
+  animation: phoneIn 1s var(--ease) forwards, phoneFloat 6s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * 160ms + 250ms), calc(var(--i, 0) * 900ms + 1.6s);
+}
+.gotime.in .phone figcaption { opacity: 1; transition-delay: calc(var(--i, 0) * 160ms + 700ms); }
+.phone:nth-child(2) { --i: 1; }
+.phone:nth-child(3) { --i: 2; }
+@keyframes phoneIn {
+  from { opacity: 0; transform: translateY(44px) rotate(calc(var(--tilt, 0) * 1deg)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes phoneFloat {
+  0%, 100% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-8px); }
+}
+.phone:nth-child(1) { --tilt: -4; }
+.phone:nth-child(3) { --tilt: 4; }
+.phones:hover .phone img { filter: saturate(.85) opacity(.75); }
+.phones .phone:hover img { filter: none; translate: 0 -10px; scale: 1.05; box-shadow: 0 34px 46px -24px rgba(20, 26, 34, .55); }
+.phones .phone:hover figcaption { color: var(--accent); }
+@media (prefers-reduced-motion: reduce) { .gotime .phone img, .gotime .phone figcaption { opacity: 1; } }
 /* 04: text-only wide card */
 .card--wide .card__body { display: grid; grid-template-columns: 1.1fr 1fr; column-gap: 48px; row-gap: 12px; align-items: start; }
 .card--wide .card__body > .case__meta, .card--wide .card__body > h3 { grid-column: 1; }
