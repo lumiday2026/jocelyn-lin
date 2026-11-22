@@ -862,3 +862,26 @@ ul.prow__keys li { padding: 5px 0; }
 /* hero: larger headline + intro */
 .hero__title { font-size: clamp(40px, 4.6vw, 62px); line-height: 1.04; }
 .hero__lede { font-size: 17.5px; max-width: 500px; line-height: 1.6; }
+
+/* Honors: award photos reveal right of the title on hover */
+.honor--photo { grid-template-columns: 100px auto 1fr auto; }
+.honor__photo { justify-self: start; width: 180px; }
+.honor__photo img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; object-position: 80% 38%; border-radius: 4px; }
+/* documents (certificates): whole page, no crop */
+.honor__photo--doc { width: 120px; }
+.honor__photo--doc.honor__photo--wide { width: 180px; }
+.honor__photo--doc img { aspect-ratio: auto; object-fit: contain; background: #fff; border: 1px solid var(--line); border-radius: 2px; }
+@media (hover: hover) and (min-width: 761px) {
+  /* zero-height cell so the hidden photo never changes the row height */
+  .honor__photo { position: relative; height: 0; align-self: center; z-index: 2; pointer-events: none; }
+  .honor__photo img { position: absolute; top: 50%; left: 0; opacity: 0; transform: translateY(-50%) translateX(-8px) scale(.96); transition: opacity .45s var(--ease), transform .6s var(--ease); box-shadow: 0 12px 32px rgba(20, 24, 32, .18); }
+  .honor--photo:hover .honor__photo img { opacity: 1; transform: translateY(-50%); }
+  /* Hsing Chien: nudge right so it clears the longer ISO title below */
+  .honor__photo--shift { margin-left: 80px; }
+}
+@media (max-width: 760px) {
+  .honor--photo { grid-template-columns: 1fr; }
+  .honor__photo { width: 100%; max-width: 360px; }
+  .honor__photo--doc { max-width: 200px; }
+  .honor__photo--doc.honor__photo--wide { max-width: 320px; }
+}
