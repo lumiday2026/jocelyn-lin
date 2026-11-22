@@ -57,9 +57,8 @@ strong { font-weight: 600; }
   position: sticky; top: 0; z-index: 30;
   background: color-mix(in srgb, var(--paper) 86%, transparent);
   backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px);
-  border-bottom: 1px solid transparent; transition: border-color .3s;
+  border-bottom: 1px solid var(--line);
 }
-.nav.scrolled { border-bottom-color: var(--line); }
 .nav__inner { height: 76px; display: flex; align-items: center; justify-content: space-between; }
 .wordmark { font: 600 26px/1 var(--serif); letter-spacing: 0; }
 .wordmark span { color: var(--accent); }
