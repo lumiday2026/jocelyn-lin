@@ -811,8 +811,8 @@ ul.prow__keys li { padding: 5px 0; }
 .story__img { aspect-ratio: 3 / 2; }
 .story--b .story__img { aspect-ratio: 1 / 1; }
 .story--c .story__img { aspect-ratio: 5 / 4; }
-.story--b .story__img { aspect-ratio: 4 / 5; }
-.story--b .story__img img { object-position: 50% 85%; }
+.story--b .story__img { aspect-ratio: 3 / 4; }
+.story--b .story__img img { object-position: 50% 50%; }
 .stories > .story:first-child .story__img { aspect-ratio: 1 / 1; }
 .stories > .story:first-child .story__img img { object-position: 50% 100%; }
 
