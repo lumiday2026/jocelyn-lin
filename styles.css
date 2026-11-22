@@ -974,3 +974,27 @@ ul.prow__keys li { padding: 5px 0; }
   .honor--m-nophoto { grid-template-columns: 1fr; }
   .honor--m-nophoto .honor__photo { display: none; }
 }
+@media (max-width: 760px) {
+  /* hero: keep the "Currently" card overlaid on the photo */
+  .hero__frame { aspect-ratio: 4 / 3.4; }
+  .hero__card {
+    position: absolute; left: 10px; right: auto; bottom: 10px; margin-top: 0;
+    max-width: min(240px, calc(100% - 20px)); padding: 11px 13px; gap: 3px;
+    box-shadow: 0 16px 34px -18px rgba(20, 26, 34, .45);
+  }
+  .hero__card .label { font-size: 9.5px; }
+  .hero__card strong { font-size: 15.5px; line-height: 1.22; }
+  .hero__card-meta { font-size: 10px; }
+}
+@media (max-width: 760px) {
+  /* GoTime: feature line and links each on a single row */
+  .gotime__text > p.gotime__feat { font-size: clamp(9px, calc((100vw - 80px) / 30), 11.5px); letter-spacing: .02em; white-space: nowrap; }
+  .gotime__links { flex-wrap: nowrap; gap: 14px; }
+  .gotime__links .btn { flex-basis: auto; flex-shrink: 0; padding: 11px 16px; font-size: 13px; gap: 8px; }
+  .gotime__links .store { font-size: 11px; letter-spacing: .04em; white-space: nowrap; }
+}
+@media (max-width: 380px) {
+  .gotime__links { gap: 10px; }
+  .gotime__links .btn { padding: 10px 12px; font-size: 12.5px; }
+  .gotime__links .store { font-size: 10px; letter-spacing: .02em; }
+}
