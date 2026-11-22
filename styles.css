@@ -885,3 +885,92 @@ ul.prow__keys li { padding: 5px 0; }
   .honor__photo--doc { max-width: 200px; }
   .honor__photo--doc.honor__photo--wide { max-width: 320px; }
 }
+
+/* ==========================================================
+   Mobile pass (≤760px): tighter rhythm, denser grids,
+   swipeable stories, thumbnail honors
+   ========================================================== */
+@media (max-width: 760px) {
+  .section { padding-top: 64px; }
+  .contact { margin-top: 72px; padding-top: 56px; }
+
+  /* experience trail: no dangling separators when it wraps */
+  .trail { gap: 4px 18px; font-size: 16px; }
+  .trail .label { flex-basis: 100%; margin-bottom: 2px; }
+  .trail i { display: none; }
+
+  /* what I do: back to 2×2 */
+  .expertise__grid { gap: 20px; }
+  .expertise__grid .skills-strip { grid-template-columns: 1fr 1fr; }
+  .expertise__grid .skills-strip li,
+  .expertise__grid .skills-strip li + li { padding: 14px 12px 14px 0; }
+  .expertise__grid .skills-strip li:nth-child(even) { padding-left: 14px; padding-right: 0; border-left: 1px solid var(--line); }
+  .expertise__grid .skills-strip h3 { font-size: 18px; }
+  .expertise__grid .skills-strip p { font-size: 10.5px; line-height: 1.5; }
+
+  /* 01 PMU case: give the diagram more room, larger SVG type */
+  .case { padding: 22px 18px; gap: 22px; }
+  .case--fsm { row-gap: 22px; }
+  .fsm { padding: 10px 8px 12px; margin-inline: -6px; }
+  .fsm__top { padding: 0 4px 10px; }
+  .fsm__labels text { font-size: 11px; }
+  .node text { font-size: 13.5px; }
+
+  /* project rows: number on top, + button beside the title block */
+  .prow { grid-template-columns: 1fr 40px; column-gap: 14px; row-gap: 6px; padding: 24px 0; }
+  .prow__n { grid-column: 1; grid-row: 1; }
+  .prow__main { grid-column: 1; grid-row: 2; }
+  .prow__more { grid-column: 2; grid-row: 1 / 3; align-self: center; }
+  .prow__keys { grid-column: 1 / -1; grid-row: 3; margin-top: 10px; }
+  .prow__big { font-size: 36px; }
+
+  /* GoTime */
+  .gotime { padding: 22px 18px; gap: 28px; }
+  .gotime__text > p.gotime__feat { font-size: 11.5px; }
+  .gotime__links { gap: 14px 24px; }
+  .gotime__links .btn { flex-basis: 100%; justify-content: center; }
+  .stat__num { font-size: 32px; }
+
+  /* About stories: horizontal swipe instead of three tall photos */
+  .stories {
+    display: grid; grid-auto-flow: column; grid-auto-columns: 78%; grid-template-columns: none;
+    gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+    --g: clamp(16px, 5vw, 64px); margin-inline: calc(-1 * var(--g)); padding-inline: var(--g); scroll-padding-inline: var(--g);
+    padding-bottom: 6px; scrollbar-width: none;
+  }
+  .stories::-webkit-scrollbar { display: none; }
+  .story { scroll-snap-align: start; align-content: start; }
+  .story__img, .story--b .story__img, .story--c .story__img,
+  .stories > .story:first-child .story__img { aspect-ratio: 4 / 5; }
+  .about__bottom { margin-top: 40px; padding-top: 24px; }
+
+  /* toolkit: 2 columns */
+  .toolkit { grid-template-columns: 1fr 1fr; margin-top: 32px; }
+  .toolkit__col { padding: 16px 14px; gap: 6px; border-right: 1px solid var(--line) !important; border-bottom: 1px solid var(--line) !important; }
+  .toolkit__col:nth-child(even) { border-right: 0 !important; }
+  .toolkit__col:nth-last-child(-n+2) { border-bottom: 0 !important; }
+  .toolkit__col p { font-size: 13px; line-height: 1.6; }
+
+  /* honors: photo becomes a tappable thumbnail on the right */
+  .honor, .honor--photo { padding: 18px 0; row-gap: 6px; }
+  .honor--photo { grid-template-columns: 1fr 84px; column-gap: 16px; align-items: start; }
+  .honor--photo .honor__year { grid-column: 1; grid-row: 1; }
+  .honor--photo .honor__main { grid-column: 1; grid-row: 2; }
+  .honor--photo .honor__tag { grid-column: 1; grid-row: 3; margin-top: 6px; }
+  .honor--photo .honor__photo { grid-column: 2; grid-row: 1 / 4; align-self: center; width: 84px; max-width: none; cursor: zoom-in; }
+  .honor__photo--doc, .honor__photo--doc.honor__photo--wide { width: 84px; max-width: none; }
+  .honor__photo img { aspect-ratio: 1 / 1; }
+  .honor__photo--doc img { aspect-ratio: auto; max-height: 112px; object-fit: contain; }
+  .honor:hover { padding-left: 0; background: none; }
+}
+@media (max-width: 380px) {
+  .expertise__grid .skills-strip h3 { font-size: 17px; }
+  .toolkit { grid-template-columns: 1fr; }
+  .toolkit__col { border-right: 0 !important; }
+  .toolkit__col:nth-last-child(2) { border-bottom: 1px solid var(--line) !important; }
+}
+@media (max-width: 760px) {
+  /* these two rows drop their photo on phones */
+  .honor--m-nophoto { grid-template-columns: 1fr; }
+  .honor--m-nophoto .honor__photo { display: none; }
+}

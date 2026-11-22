@@ -109,11 +109,12 @@
   const lb = document.getElementById('lightbox');
   const img = document.getElementById('lbImg');
   const cap = document.getElementById('lbCap');
-  document.querySelectorAll('.g, .story__img').forEach((g) => {
+  document.querySelectorAll('.g, .story__img, .honor__photo').forEach((g) => {
     g.addEventListener('click', () => {
-      img.src = g.dataset.full;
-      img.alt = g.querySelector('img').alt;
-      cap.textContent = g.dataset.cap || '';
+      const pic = g.querySelector('img');
+      img.src = g.dataset.full || pic.currentSrc || pic.src;
+      img.alt = pic.alt;
+      cap.textContent = g.dataset.cap || g.closest('.honor')?.querySelector('h3')?.textContent || '';
       lb.showModal();
     });
   });
